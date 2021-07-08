@@ -131,7 +131,7 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
   const $aside = $("<aside>")
-  $("body").append($aside)
+  $("#middle-earth").append($aside)
   // 2. display an unordered list of buddies in the aside
   const $ul3 = $("<ul>")
   buddies.forEach((b) => {
@@ -153,7 +153,9 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  const $onTheMove = $("#The-Shire>ul")
+  $("#Rivendell").append($onTheMove)
+  
 };
 
 // COMMIT YOUR WORK
@@ -163,10 +165,11 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
+  
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside'
-
+  $(".buddy").eq(3).text("Aragon")
 };
 
 // COMMIT YOUR WORK
