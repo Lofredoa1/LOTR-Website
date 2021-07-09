@@ -243,9 +243,15 @@ $button.on("click", (event) => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  const $hobbitsLeave = $("li.hobbit").siblings()
+  console.log($hobbitsLeave)
+  const $goodbye = $hobbitsLeave.splice(0, 2)
+  console.log($hobbitsLeave)
+  $("#Mordor").append($goodbye)
 
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+  const $mtDoom = $("<div>").attr("id", "mount-doom")
+  $("#Mordor").append($mtDoom)
 };
 
 // COMMIT YOUR WORK
