@@ -221,10 +221,16 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+const $button = $("#10")
 
+//adding our event listener, event now defined inline
+$button.on("click", (event) => {
+    alert("The horn of Gondor has been blown")
+})
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  $(".buddy").eq(4).css("text-decoration", "line-through")
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+  $("#Mordor>ul>li").eq(2).remove()
 
 };
 
