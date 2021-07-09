@@ -222,8 +222,6 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 const $button = $("#10")
-
-//adding our event listener, event now defined inline
 $button.on("click", (event) => {
     alert("The horn of Gondor has been blown")
 })
@@ -282,11 +280,12 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  $("#gollum").remove()
   // 2. remove all the baddies from the DOM
-
+  $(".baddy").remove()
   // 3. Move all the hobbits back to the shire
-
+  const $itsOver = $(".hobbit")
+  $("#The-Shire").append($itsOver)
 };
 
 // COMMIT YOUR WORK
